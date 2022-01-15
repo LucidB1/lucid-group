@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit";
+}
+.container {
+  width: 350px;
+  position: absolute;
+  left: 50px;
+  top: 35%;
+  transform: translateY(-50%);
+
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.badge {
+  background-color: #466887;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px 8px;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.leader {
+  position: relative;
+}
+
+.fas {
+  font-size: 14px;
+}
+
+.player-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.player-text {
+  display: flex;
+  width: 100%;
+  font-weight: 300;
+
+  font-size: 20px;
+}
+
+.player-bar {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+
+  height: 18px;
+  width: 100%;
+}
+
+.player-box {
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.f-size-1 {
+  font-size: 12px;
+}
+
+.bg-dark {
+}
+
+h3 {
+  font-weight: 200;
+}
+
+.player {
+  color: white;
+
+  font-weight: 100;
+  width: 100%;
+  padding: 7px 20px;
+}
+
+.health-bar {
+  height: 70%;
+  width: 80%;
+  margin: 0 5px 0 0;
+  background-color: #5c5c5c;
+  border-radius: 2px;
+}
+
+.health-bar-progress {
+  color: white;
+  width: 30%;
+  border-radius: 2px;
+
+  height: 100%;
+  display: flex;
+  transition: all 0.2s linear;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff !important;
+}

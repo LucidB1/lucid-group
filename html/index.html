@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a3059c425a.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="container" v-if=show>
+
+            <div class="player-box bg-dark">
+                <div class="header player ">
+                    <h3>{{players[0].partyname}}</h2>
+                </div>
+                <div class="player" :class="{leader:player.isLeader}" v-for="player in players">
+                    <div class="player-text">
+                        <p class="player-name">
+                        <p>{{player.name.length > 23 ? player.name.substring(0,20) + '..' : player.name}} <span v-if="player.src != source" style="font-weight: 200; font-size: 15px;">{{player.dist}}M</span></p>
+                        </p>
+                    </div>
+                    <div class="player-bar">
+                        <div class="health-bar">
+                            <div class="health-bar-progress"
+                                :style="{width:player.health+'%', ['background-color']: player.health < '60' ? 'crimson' : 'green' }">
+                                </div>
+                        </div>
+                        <p>{{player.health}}</p>
+                    
+
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
